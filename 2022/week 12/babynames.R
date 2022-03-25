@@ -35,6 +35,7 @@ ggplot(names, aes(x = year, y = ratio, group = name)) +
         axis.title.x.top = element_blank(),
         axis.title.x.bottom = element_text(margin = margin(20,0,0,0)),
         plot.margin = margin(20,20,20,20),
-        plot.caption = element_text(family = "NimbusMon", face = "italic"))
+        plot.caption = element_text(family = "NimbusMon", face = "italic", size = 6),
+        plot.subtitle = element_text(size = 8))
 
 ggsave(filename = "2022/week 12/babynames.png", height = 8, width = 12, units = "in")
