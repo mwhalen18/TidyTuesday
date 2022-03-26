@@ -13,7 +13,7 @@ names = babynames %>%
               names_prefix = "total_") %>% 
   mutate(ratio = total_F/total_M) %>% 
   filter(!is.na(ratio)) %>% 
-  slice_sample(prop = .1)
+  slice_sample(prop = 1)
   
 ggplot(names, aes(x = year, y = ratio, group = name)) +
   geom_line(size = 0.1, alpha = 0.5, color = "#4b0082") +
